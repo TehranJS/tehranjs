@@ -1,0 +1,56 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+session_title: تست نوشتن، چرا و چگونه؟ (قسمت اول)
+session_provider: محمد محمودی
+session_date: 2017-04-10 02:14:49 +0430
+session_link: https://www.evand.com
+session_provider_twitter_id: mm580486
+title: تهران جی اس | tehranjs
+email: tehranjs@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+  تِهران جِی اِس یه دورهمیه که از حدود یک سال پیش (اولین جلسه‌اش، ۱۱ اسفند ۹۴) تا حالا هر دو هفته یه بار توی
+  شرکت رهنما برگزار شده و خواهد شد. توی این یک سال گذشته هم بیشتر درباره‌ی جاوااسکریپت صحبت کردیم. هر چند
+  هدف اولیه برگزاری این نشست‌ها بیشتر تبادل تجربیات‌مون توی مدیریت، پیاده سازی و توسعه‌ی نرم افزار و مفاهیم
+  پایه‌ی اون بوده که اگه ربطی هم به جاوااسکریپت داشتن چه بهتر.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://tehranjs.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: tehranjs
+github_username:  tehranjs
+# data:
+#   tags: ['javascript','test','uitest','js','event']
+
+# Build settings
+include: ['_pages', '_events']
+kramdown:
+  input: GFM
+gems:
+  - jekyll-feed
+  - jalalidate
+# Handling Readin
+encoding: "utf-8"
+include:
+  - .htaccess
+  - CNAME
+  - README.md
+keep_files:
+  - .git
+  - assets
+  - styles
+exclude:
+  - assets
+  - styles
+  - node_modules
+  - package.json

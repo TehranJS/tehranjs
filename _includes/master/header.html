@@ -1,0 +1,12 @@
+<header class="c-site-header">
+  <div class="o-wrapper o-wrapper--small">
+    <div class="c-site-header__inner">
+      <a href="/" class="c-brand"><img class="c-brand__logo" src="/apple-touch-icon.png" alt="tehranjs logo - لوگوی تهران جی اس"></a>
+      <nav class="c-navigation">
+        {% for page in site.pages %} {% if page.title %}
+        <a class="c-navigation__item" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+        {% endif %}{% endfor %}
+      </nav>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,25 @@
+
+<article class="c-tags u-margin-bottom-large">
+  <header class="u-margin-bottom-small"><strong class="u-h4 u-color-gray-dark">برچسب شده در:</strong></header>
+  <main>
+    <ul class="o-list-inline">
+      {% assign post = page %}
+      {% if post.tags.size > 0 %}
+          {% for post_tag in post.tags %}
+              {% for data_tag in site.data.tags %}
+                  {% if data_tag.slug == post_tag %}
+                      {% assign tag = data_tag %}
+                  {% endif %}
+              {% endfor %}
+              {% if tag %}
+                  {% capture tags_content_temp %}{{ tags_content }}<li class="o-list-inline__item"><a class="o-list-inline__link c-bage c-bage--primary" href="/blog/tag/{{ tag.slug }}/" class="c-tags__item">{{ tag.name }}</a></li>{% endcapture %}
+                  {% assign tags_content = tags_content_temp %}
+              {% endif %}
+          {% endfor %}
+      {% else %}
+          {% assign tags_content = '' %}
+      {% endif %}
+{{ tags_content }}
+    </ul>
+  </main>
+</article>
