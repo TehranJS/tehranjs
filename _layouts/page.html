@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+{% include master/head.html %}
+<body>
+  {% include master/header.html %}
+  <main>
+    <article>
+      <main class="c-single-page__main u-margin-bottom-huge">
+        <div class="o-wrapper o-wrapper--small">
+          <article class="c-single-page__article">
+            {% if page.id == "about" %}
+            <header class="c-article__header u-align-center">
+              <h1 class="c-article__title">{{page.title}}</h1>
+            </header>
+            {% endif %}
+            <main class="c-article__body">
+              {{content}}
+            </main>
+          </article>
+        </div>
+      </main>
+    </article>
+    {% include master/footer.html %}
+  </main>
+</body>
+</html>

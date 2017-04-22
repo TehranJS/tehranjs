@@ -1,0 +1,13 @@
+---
+layout: page
+title: "تگ"
+id: blog
+---
+<h3>پست های مربوط به {{ page.tag }}</h3>
+    {% if site.tags[page.tag] %}
+        {% for post in site.tags[page.tag] %}
+                      {% include partials/post-list.html post=post %}
+        {% endfor %}
+    {% else %}
+        <p>پستی یافت نشد</p>
+    {% endif %}

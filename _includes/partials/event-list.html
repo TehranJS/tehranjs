@@ -1,0 +1,8 @@
+<div class="c-event-item u-margin-bottom-large">
+  <div class="c-event-item__body">
+    <h3 class="c-event-item__title u-margin-bottom-none"><a href="{{ event.url }}" data-turbolinks="true">{{ event.title }}</a></h3>
+    <p class="c-event-item__subtitle u-margin-bottom-none">
+      <span><time datetime="{{ event.date }}" itemprop="datePublished">{{ event.date | jdate: "%A %d %b %Y" }}</time></span> - <a href="https://www.twitter.com/{{ event.author_twitter_id }}" target="_blank">{{ event.author }}</a>
+    </p>
+  </div>
+</div>

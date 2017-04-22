@@ -1,0 +1,8 @@
+---
+layout: page
+title: "جلسات"
+id: events
+---
+{% for event in site.categories.event %}
+  {% include partials/event-list.html event=event %}
+{% endfor %}

@@ -1,0 +1,61 @@
+---
+layout: page
+---
+<!--TODO: EVENT TEMPLATE-->
+<header class="c-article__header u-align-center u-padding-bottom-large">
+  <p class="u-h4 u-color-gray-dark">{{ page.session }}
+
+
+  </p>
+
+  <h1 class="c-article__title ">{{ page.title }}</h1>
+  <p class="article__subtitle u-color-gray-dark u-margin-bottom-large">
+          <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | jdate: "%d %b %Y" | habify}}</time>{% if page.author %} توسط <span itemprop="author" itemscope itemtype="http://schema.org/Person"><a target='_blank' href="https://www.twitter.com/{{ post.author_twitter_id }}" itemprop="name">{{ page.author }}</a></span>{% endif %}{% if page.category_fa  %} در دسته‌ی: <a href="{{ site.baseurl | urljoin: "/blog/category/" }}{{ page.category }}">{{ page.category_fa }}</a>{% endif %}
+        </p>
+  <div class="c-event-detail">
+    <dl class="c-event-detail__list u-align-right o-list-bare u-clearfix">
+      <dt class="c-event-detail__item-title">تاریخ:</dt>
+      <dd class="c-event-detail__item-data">
+        <time datetime="2016-01-11T00:00:00+03:30" itemprop="datePublished"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | jdate: "%d %b %Y" | habify}}</time></time>
+      </dd>
+      <dt class="c-event-detail__item-title">ارایه دهنده:</dt>
+      <dd class="c-event-detail__item-data"><a href="{{ page.url }}" itemprop="name">{{ page.author }}</a></dd>
+      {% if page.video %}
+      <dt class="c-event-detail__item-title">ویدیو:</dt>
+      <dd class="c-event-detail__item-data"><a href="{{ page.video}}" itemprop="name">یوتوب</a></dd>
+      {% endif %}
+      {% if page.audio %}
+      <dt class="c-event-detail__item-title">صدا:</dt>
+      <dd class="c-event-detail__item-data"><a href="{{ page.audio }}" itemprop="name">ساندکلود</a></dd>
+      {% endif %}
+      {% if page.slides %}
+      <dt class="c-event-detail__item-title">اسلاید:</dt>
+      <dd class="c-event-detail__item-data"><a href="{{ page.slides }}" itemprop="name">{{ page.title }}</a></dd>
+      {% endif %}
+    </dl>
+  </div>
+</header>
+<main class="c-article__body u-margin-bottom-large">
+  {{ content }}
+  {% include partials/tags.html post=post %}
+  {% include partials/share-links.html post=post %}
+  <div id="disqus_thread"></div>
+</main>
+<script>
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://tehranjs.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
