@@ -14,7 +14,7 @@ description: > # this means to ignore newlines until "baseurl:"
   هدف اولیه برگزاری این نشست‌ها بیشتر تبادل تجربیات‌مون توی مدیریت، پیاده سازی و توسعه‌ی نرم افزار و مفاهیم
   پایه‌ی اون بوده که اگه ربطی هم به جاوااسکریپت داشتن چه بهتر.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://tehranjs.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "http://tehranjs.net" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: tehranjs
 github_username:  tehranjs
 
@@ -22,21 +22,23 @@ github_username:  tehranjs
 include: ['_pages', '_events']
 kramdown:
   input: GFM
+
 gems:
   - jekyll-feed
-  - jalalidate
+
+# Sass settings
+sass:
+  sass_dir: assets/sass
+  style: :compressed
+
+# Build settings
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - package.json
+  - README.md
+  - CNAME
+  - node_modules
+
 # Handling Readin
 encoding: "utf-8"
-include:
-  - .htaccess
-  - CNAME
-  - README.md
-keep_files:
-  - .git
-  - assets
-  - styles
-exclude:
-  - assets
-  - styles
-  - node_modules
-  - package.json
