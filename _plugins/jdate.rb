@@ -10,6 +10,7 @@ module Jekyll
       jalali = JalaliDate.new(date)
       return jalali.strftime(options)
     end
+
   end
 end
 

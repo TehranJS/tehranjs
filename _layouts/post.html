@@ -1,8 +1,6 @@
 ---
 layout: page
 ---
-
-
 <!--TODO: EVENT TEMPLATE-->
 <header class="c-article__header u-align-center u-padding-bottom-large">
   <p class="u-h4 u-color-gray-dark">{{ page.session }}
@@ -14,7 +12,6 @@ layout: page
   <p class="article__subtitle u-color-gray-dark u-margin-bottom-large">
           <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | jdate: "%d %b %Y" | habify}}</time>{% if page.author %} توسط <span itemprop="author" itemscope itemtype="http://schema.org/Person"><a target='_blank' href="https://www.twitter.com/{{ post.author_twitter_id }}" itemprop="name">{{ page.author }}</a></span>{% endif %}{% if page.category_fa  %} در دسته‌ی: <a href="{{ site.baseurl | urljoin: "/blog/category/" }}{{ page.category }}">{{ page.category_fa }}</a>{% endif %}
         </p>
-
   <div class="c-event-detail">
     <dl class="c-event-detail__list u-align-right o-list-bare u-clearfix">
       <dt class="c-event-detail__item-title">تاریخ:</dt>
@@ -38,22 +35,13 @@ layout: page
     </dl>
   </div>
 </header>
-
 <main class="c-article__body u-margin-bottom-large">
-    {{ content }}
-
-    {% include partials/tags.html post=post %}
-
-    {% include partials/share-links.html post=post %}
-
-
+  {{ content }}
+  {% include partials/tags.html post=post %}
+  {% include partials/share-links.html post=post %}
   <div id="disqus_thread"></div>
-
 </main>
-
-
 <script>
-
 /**
 *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
