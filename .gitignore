@@ -259,4 +259,4 @@ $RECYCLE.BIN/
 .tmp
 .publish
 test
-_site
+_site/
