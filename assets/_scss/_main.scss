@@ -1,4 +1,3 @@
-@charset 'UTF-8';
 
 /**
  * BASE: css framework
@@ -58,7 +57,7 @@ $is-active_vertical-rhythm-debugger: false;
  */
 
 // bower:scss
-@import "bower_components/sass-mq/_mq.scss";
+@import "../../bower_components/sass-mq/_mq.scss";
 // endbower
 
 /**
