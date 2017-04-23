@@ -28,7 +28,7 @@ gems:
 
 # Sass settings
 sass:
-  sass_dir: assets/sass
+  sass_dir: assets/_scss
   style: :compressed
 
 # Build settings
