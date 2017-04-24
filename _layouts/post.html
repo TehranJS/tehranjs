@@ -10,13 +10,13 @@ layout: page
 
   <h1 class="c-article__title ">{{ page.title }}</h1>
   <p class="article__subtitle u-color-gray-dark u-margin-bottom-large">
-          <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | jdate: "%d %b %Y" | habify}}</time>{% if page.author %} توسط <span itemprop="author" itemscope itemtype="http://schema.org/Person"><a target='_blank' href="https://www.twitter.com/{{ post.author_twitter_id }}" itemprop="name">{{ page.author }}</a></span>{% endif %}{% if page.category_fa  %} در دسته‌ی: <a href="{{ site.baseurl | urljoin: "/blog/category/" }}{{ page.category }}">{{ page.category_fa }}</a>{% endif %}
+          <time datetime="{{ page.pdate | date_to_xmlschema }}" itemprop="datePublished">{{ page.pdate | date: "%-d / %-m / %Y" | habify}}</time>{% if page.author %} توسط <span itemprop="author" itemscope itemtype="http://schema.org/Person"><a target='_blank' href="https://www.twitter.com/{{ post.author_twitter_id }}" itemprop="name">{{ page.author }}</a></span>{% endif %}{% if page.category_fa  %} در دسته‌ی: <a href="{{ site.baseurl | urljoin: "/blog/category/" }}{{ page.category }}">{{ page.category_fa }}</a>{% endif %}
         </p>
   <div class="c-event-detail">
     <dl class="c-event-detail__list u-align-right o-list-bare u-clearfix">
       <dt class="c-event-detail__item-title">تاریخ:</dt>
       <dd class="c-event-detail__item-data">
-        <time datetime="2016-01-11T00:00:00+03:30" itemprop="datePublished"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | jdate: "%d %b %Y" | habify}}</time></time>
+        <time datetime="2016-01-11T00:00:00+03:30" itemprop="datePublished"><time datetime="{{ page.pdate | date_to_xmlschema }}" itemprop="datePublished">{{ page.pdate | date: "%-d / %-m / %Y" | habify}}</time></time>
       </dd>
       <dt class="c-event-detail__item-title">ارایه دهنده:</dt>
       <dd class="c-event-detail__item-data"><a href="{{ page.url }}" itemprop="name">{{ page.author }}</a></dd>
