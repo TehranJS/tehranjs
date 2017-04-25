@@ -1,4 +1,4 @@
 <div class="c-blog-item u-margin-bottom">
   <h3 class="c-blog-item__title u-margin-bottom-none"><a href="{{ post.url }}">{{ post.title }}</a></h3>
-  <p class="c-blog-item__subtitle u-margin-bottom-none"><span><time datetime="{{ post.date | jdate: "%A %d %b %Y" }}" itemprop="datePublished">{{ post.pdate | date: "%-d / %-m / %Y" | habify}}</time></span> - <a href="https://www.twitter.com/{{ post.author_twitter_id }}" data-turbolinks="true">{{ post.author }}</a></p>
+  <p class="c-blog-item__subtitle u-margin-bottom-none"><span><time datetime="{{ post.date | jdate: "%A %d %b %Y" }}" itemprop="datePublished">{{ post.date | jdate: "%d %b %Y" | habify}}</time></span> - <a href="https://www.twitter.com/{{ post.author_twitter_id }}" data-turbolinks="true">{{ post.author }}</a></p>
 </div>

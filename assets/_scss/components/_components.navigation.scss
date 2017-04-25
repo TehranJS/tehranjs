@@ -3,6 +3,9 @@
 	align-self: center;
 } // .c-navigation
 
+body{
+	display: none !important;
+}
 
 .c-navigation__item {
 	display: inline-flex;

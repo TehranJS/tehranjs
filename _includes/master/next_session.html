@@ -3,7 +3,7 @@
     <h2 class="c-section__title">جلسه‌ی آینده</h2>
     <div class="c-next-event">
       <h3 class="c-next-event__title u-margin-bottom-none"><b>{{ site.session_title }}</b></h3>
-      <p class="c-next-event__subtitle u-color-gray-dark"> {{ site.session_date | date: "%-d / %-m / %Y" }} - <a href="https://www.twitter.com/{{ site.session_provider_twitter_id }}" target="_blank">{{ site.session_provider}}</a></p>
+      <p class="c-next-event__subtitle u-color-gray-dark"> {{ site.session_date | jdate: "%A %d %b %Y" }} - <a href="https://www.twitter.com/{{ site.session_provider_twitter_id }}" target="_blank">{{ site.session_provider}}</a></p>
       <a href="{{ site.session_link }}" target="_blank" title="evand" class="c-next-event__button c-btn c-btn--secondary c-btn--small">
         تهیه بلیط
       </a>
