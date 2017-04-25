@@ -3,15 +3,14 @@
 	align-self: center;
 } // .c-navigation
 
-body{
-	display: none !important;
-}
-
 .c-navigation__item {
 	display: inline-flex;
 	margin-right: 1rem;
 	color: $gray-dark;
 
+	.active{
+		color: $primary;
+	}
 	@include on-event {
 		color: $primary;
 	}
