@@ -7,5 +7,6 @@ count: 24
 author: محمد محمودی
 author_twitter_id: mm580486
 tags: ['event']
+permalink: /:year/:title
 ---
 ddsds

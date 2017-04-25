@@ -18,7 +18,8 @@ url: "http://tehranjs.net" # the base hostname & protocol for your site, e.g. ht
 twitter_username: tehranjs
 github_username:  tehranjs
 
-permalink: pretty
+
+permalink: /:year/:title
 # Build settings
 include: ['_pages', '_events']
 kramdown:
