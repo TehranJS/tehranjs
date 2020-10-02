@@ -9,8 +9,9 @@ const MyModal = ({
     children
 }) =>{
 
-    const onCloseModal = () => {
-        setOpen(false)
+    const onCloseModal = (event) => {
+      if(event) event.preventDefault()
+      setOpen(false)
     }
 
     return (
